@@ -9,7 +9,7 @@ app.listen(3000, () =>
 
 app.post("/createRoom", (request, response) =>{
     const body = request.body;
-    //console.log(body);
+    //console.log(body)
     const headerConfig = { headers: { 'Content-Type': 'application/json', 'authorization': request.headers.authorization, }, };
     axios.post('https://api.daily.co/v1/rooms', body, headerConfig)
       .then((resp) => {
